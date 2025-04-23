@@ -9,3 +9,36 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+.square {
+    width: 350px;
+    height: 200px;
+    background-color: black;
+    border-radius: 15%;
+    align-items: center;
+    margin:auto;
+    display: inline-block;
+    
+}
+.color-first{
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: yellow;
+}
+.green{
+    background-color: green;
+}
+
+.shadow-ch{
+    box-shadow: 0px 0px 20px 20px #b0e874;
+}
+
+.purple{
+    background-color: purple;
+}
