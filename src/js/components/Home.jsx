@@ -7,22 +7,26 @@ import rigoImage from "../../img/rigo-baby.jpg";
 //create your first component
 const Home = () => {
 	const [color, setColor] = useState("");
+	const [viewPurple, setViewPurple] = useState(false);
 
 
 	const changeColor = () => {
 		setColor('red');
 		if (color === 'red') setColor('yellow');
 		if (color === 'yellow') setColor('green')
-		if (color === 'green') setColor('red')
+		if (color === 'green') setColor('purple')
+		if	(color === 'purple') setColor('red')
 	}
 	const addColor = () => {
+			setViewPurple(true);
+				
 			
 	}
 
 
 	return (
 		<>
-			<div className="d-flex row  justify-content-center square my-5">
+			<div id="father"  className="d-flex row  justify-content-center square my-5">
 				<div onClick={() => setColor('red')}
 					className={"color-first red mx-2" + (color === 'red' ? ' shadow-ch' : "")}>
 
@@ -37,6 +41,14 @@ const Home = () => {
 					className={"color-first green mx-2" + (color === 'green' ? ' shadow-ch' : "")}>
 
 				</div>
+				
+				{viewPurple &&(
+				<div onClick={() => setColor('purple')}
+					className={"color-first purple mx-2" + (color === 'purple' ? ' shadow-ch' : "")}>
+
+				</div>
+				)};
+
 
 			</div>
 			<div className="d-flex justify-content-center mx-2">
